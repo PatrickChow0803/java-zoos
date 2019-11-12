@@ -11,7 +11,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "zooanimals")
 public class ZooAnimals extends Auditable implements Serializable {
-    
+
     @Id
     @ManyToOne
     @JoinColumn(name = "zooid")
