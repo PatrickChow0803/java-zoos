@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "animal")
@@ -16,7 +17,6 @@ public class Animal extends Auditable {
 
     private String animaltype;
 
-    // TODO
     @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("animal")
     private List<ZooAnimals> zooanimals = new ArrayList<>();
